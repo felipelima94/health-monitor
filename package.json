@@ -1,0 +1,20 @@
+{
+  "name": "monit-health",
+  "version": "0.0.1",
+  "description": "Health status APIs monitor",
+  "main": "start.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "health",
+    "API",
+    "Monitor",
+    "Status"
+  ],
+  "author": "Felipe Lima",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
