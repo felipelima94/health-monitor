@@ -1,4 +1,9 @@
 const mongoose = require('mongoose')
 
-mongoose.connect(process.env.dbUri, { useNewUrlParser: true, useUnifiedTopology: true }).catch(error => handleError(error));
-console.log("database connected!")
+let username = process.env.username
+let password = process.env.password
+let database = process.env.database
+let url = `mongodb+srv://${username}:${password}@cluster0.fnxid.mongodb.net/${database}?retryWrites=true&w=majority`
+
+mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true }).catch(error => handleError(error));
+console.info("database connected!")
