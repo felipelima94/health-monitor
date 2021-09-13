@@ -13,7 +13,9 @@
                 "<node_internals>/**"
             ],
             "env": {
-                "dbUri": ""
+                "username": "",
+                "password": "",
+                "database": "",
             },
             "program": "${workspaceFolder}/app.js"
         }
