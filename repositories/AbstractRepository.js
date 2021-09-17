@@ -13,7 +13,7 @@ const create = async (REP, data) => {
 }
 
 const find = (REP, filter) => {
-    const query = REP.find(filter)
+    const query = REP.find(filter).lean()
     return query.exec()
 }
 

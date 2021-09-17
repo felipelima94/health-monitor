@@ -6,9 +6,10 @@ let router = express.Router()
 router.post('/create', async (req, res) => {
         res.json( await urlRepository.create(req.body) )
     }
-).get('/find', async (req, res) => {
-        res.json( await urlRepository.find({}) )
+).post('/find', async (req, res) => {
+        res.json( await urlRepository.find(req.body) )
     }
 )
+
 
 module.exports = router
