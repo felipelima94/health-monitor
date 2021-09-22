@@ -13,12 +13,11 @@ const create = async (REP, data) => {
 }
 
 const findById = (REP, id) => {
-    return REP.findById(id).exec()
+    return REP.findById(id).lean().exec()
 }
 
 const find = (REP, filter) => {
-    const query = REP.find(filter).lean()
-    return query.exec()
+    return REP.find(filter).lean().exec()
 }
 
 const updateById = (REP, id, data) => {
