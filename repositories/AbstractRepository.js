@@ -12,12 +12,27 @@ const create = async (REP, data) => {
     return msg
 }
 
+const findById = (REP, id) => {
+    return REP.findById(id).exec()
+}
+
 const find = (REP, filter) => {
     const query = REP.find(filter).lean()
     return query.exec()
 }
 
+const updateById = (REP, id, data) => {
+    return REP.update({_id: id}, data).exec()
+}
+
+const deleteByFilter = (REP, filter) => {
+    return REP.deleteMany(filter)
+}
+
 module.exports = {
     create,
-    find
+    find,
+    findById,
+    updateById,
+    deleteByFilter
 }
