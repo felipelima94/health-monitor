@@ -11,6 +11,8 @@ router.get('/findById/:id', async (req, res) =>
     res.json( await urlRepository.find(req.body) )
 ).put('/update/:id', async (req, res) => 
     res.json( await urlRepository.updateById(req.params.id, req.body) )
+).delete('/delete', async (req, res) => 
+    res.json( await urlRepository.deleteMany(req.body) )
 ).delete('/delete/:id', async (req, res) => 
     res.json( await urlRepository.deleteById(req.params.id) )
 )
